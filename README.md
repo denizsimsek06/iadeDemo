@@ -1,2 +1,4 @@
 # iadeDemo
-Demonstration project, aims are to accurately detect, identify and count multiple packaged biscuits of Eti Tutku 60g.
+Demonstration project. 
+
+Aims are to detect, identify and count multiple packaged biscuits of Eti Tutku 60g.
