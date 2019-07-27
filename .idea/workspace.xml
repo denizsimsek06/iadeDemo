@@ -2,127 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8d447fe-d071-4d84-b59b-6d9692bdad6e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/iadeDemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/iadeDemo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/eti.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Apple-Juice_001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Apple-Juice_002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Apple-Juice_004.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Apple-Juice_005.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Apple-Juice_006.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Apple-Juice_007.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Golden-Grapefruit_001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Golden-Grapefruit_002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Golden-Grapefruit_004.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Golden-Grapefruit_006.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Golden-Grapefruit_007.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Juice-Smooth_001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Juice-Smooth_002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Juice-Smooth_003.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Juice-Smooth_004.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Juice-Smooth_005.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Juice-Smooth_007.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Mandarin-Morning_001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Mandarin-Morning_002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Mandarin-Morning_003.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Mandarin-Morning_004.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Mandarin-Morning_005.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/Tropicana-Mandarin-Morning_006.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_004.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_005.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_006.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_007.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_008.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_009.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_010.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_011.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_013.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_014.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_015.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_017.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_019.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_020.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_021.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_022.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_023.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_024.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_025.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_026.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_027.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_029.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_030.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_031.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_32.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_33.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_35.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_36.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_37.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_38.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_40.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_41.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_50.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_51.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_52.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_53.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_55.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/eti-tutku_7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-mandarin0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-mandarin1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-mandarin10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-mandarin11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-mandarin3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-mandarin4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-mandarin5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-mandarin6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-mandarin8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-mandarin9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-smooth0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-smooth1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-smooth11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-smooth12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-smooth13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-smooth14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-smooth2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-smooth3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-smooth4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-smooth6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-smooth7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-smooth8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/train/tropicana-smooth9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/Tropicana-Apple-Juice_003.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/Tropicana-Golden-Grapefruit_003.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/Tropicana-Golden-Grapefruit_005.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/Tropicana-Juice-Smooth_006.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/Tropicana-Mandarin-Morning_007.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/eti-tutku_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/eti-tutku_003.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/eti-tutku_012.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/eti-tutku_018.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/eti-tutku_028.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/eti-tutku_31.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/eti-tutku_34.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/eti-tutku_39.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/eti-tutku_54.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/eti-tutku_56.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/eti-tutku_8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/tropicana-mandarin12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/tropicana-mandarin2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/tropicana-mandarin7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/tropicana-smooth10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/tropicana-smooth15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/tropicana-smooth16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/packages/val/tropicana-smooth5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/intro.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loaddata.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/packages/train/via_region_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/packages/train/via_region_data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eti/eti.py" beforeDir="false" afterPath="$PROJECT_DIR$/eti/eti.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mrcnn/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/mrcnn/model.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,20 +15,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/eti/eti.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3035">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="634">
+              <caret line="92" column="24" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/eti/inspect_eti_model.ipynb">
+          <provider selected="true" editor-type-id="jupyter-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/eti/deneme.ipynb">
+          <provider selected="true" editor-type-id="jupyter-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/eti/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -153,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mrcnn/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="2276" column="45" selection-start-line="2276" selection-start-column="40" selection-end-line="2276" selection-end-column="45" />
+            <state relative-caret-position="343">
+              <caret line="1213" column="4" selection-start-line="1213" selection-start-column="4" selection-end-line="1218" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -165,12 +64,23 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>callb</find>
+      <find>log</find>
+      <find>load_image</find>
+      <find>maskrc</find>
+      <find>DEVIC</find>
+      <find>MaskRC</find>
+      <find>load_image_gt(</find>
+      <find>rcnn</find>
+      <find>image_id</find>
+      <find>resize</find>
+      <find>class_names</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -187,14 +97,16 @@
         <option value="$PROJECT_DIR$/intro.py" />
         <option value="$PROJECT_DIR$/intro.py" />
         <option value="$PROJECT_DIR$/eti/test.py" />
+        <option value="$PROJECT_DIR$/mrcnn/model.py" />
         <option value="$PROJECT_DIR$/eti/eti.py" />
+        <option value="$PROJECT_DIR$/eti/deneme.ipynb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="840" />
-    <option name="height" value="484" />
+    <option name="width" value="843" />
+    <option name="height" value="486" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -213,7 +125,23 @@
             <path>
               <item name="iadeDemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="iadeDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="datasets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iadeDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iadeDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="datasets" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iadeDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iadeDemo" type="462c0819:PsiDirectoryNode" />
               <item name="eti" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iadeDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iadeDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="mrcnn" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -228,6 +156,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/eti" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -283,7 +216,11 @@
       <workItem from="1563203261912" duration="1794000" />
       <workItem from="1563264024990" duration="801000" />
       <workItem from="1563265167318" duration="1026000" />
-      <workItem from="1564081147285" duration="416000" />
+      <workItem from="1564081147285" duration="893000" />
+      <workItem from="1564084143455" duration="113000" />
+      <workItem from="1564119710269" duration="28000" />
+      <workItem from="1564120746190" duration="1943000" />
+      <workItem from="1564125142179" duration="4463000" />
     </task>
     <task id="LOCAL-00001" summary="update dataset">
       <created>1563265462154</created>
@@ -296,17 +233,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16544000" />
+    <option name="totallyTimeSpent" value="23568000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="967" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="972" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25702077" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26923078" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Jupyter" visible="true" weight="0.085180864" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.15610328" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.15610328" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39906102" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -315,7 +254,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32894737" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32905483" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3298122" />
       <window_info anchor="right" x="0" y="0" width="160" height="767" id="Documentation" order="0" side_tool="true" weight="0.32957393" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
@@ -387,26 +326,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/loaddata.py" />
     <entry file="file://$PROJECT_DIR$/intro.py" />
-    <entry file="file://$PROJECT_DIR$/mrcnn/model.py">
+    <entry file="file://$PROJECT_DIR$/eti/eti.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="2276" column="45" selection-start-line="2276" selection-start-column="40" selection-end-line="2276" selection-end-column="45" />
+        <state relative-caret-position="634">
+          <caret line="92" column="24" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/eti/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/eti/eti.py">
+    <entry file="file://$PROJECT_DIR$/mrcnn/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3035">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="343">
+          <caret line="1213" column="4" selection-start-line="1213" selection-start-column="4" selection-end-line="1218" selection-end-column="38" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eti/inspect_eti_model.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eti/deneme.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
   </component>
 </project>

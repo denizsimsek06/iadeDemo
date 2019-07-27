@@ -19,7 +19,7 @@ COCO_WEIGHTS_PATH = os.path.join(ROOT_DIR, "mask_rcnn_coco.h5")
 print(COCO_WEIGHTS_PATH)
 # Directory to save logs and model checkpoints, if not provided
 # through the command line argument --logs
-DEFAULT_LOGS_DIR = os.path.join(ROOT_DIR, "logs")
+DEFAULT_LOGS_DIR = os.path.join(ROOT_DIR, "../logs")
 
 
 ############################################################
@@ -42,8 +42,8 @@ class EtiConfig(Config):
     STEPS_PER_EPOCH = 92
     VALIDATION_STEPS = 23
 
-    # Skip detections with < 50% confidence
-    DETECTION_MIN_CONFIDENCE = 0.5
+    # Skip detections with < 70% confidence
+    DETECTION_MIN_CONFIDENCE = 0.7
 
 
 ############################################################
@@ -165,7 +165,7 @@ def train(model):
                 learning_rate=config.LEARNING_RATE,
                 epochs=30,
                 layers='heads',
-                custom_callbacks=K.callbacks.EarlyStopping(monitor='val_loss',mode=min))
+                custom_callbacks=K.callbacks.EarlyStopping(monitor='val_loss',mode=min, patience=5))
 
 
 if __name__ == '__main__':
@@ -177,10 +177,12 @@ if __name__ == '__main__':
     parser.add_argument("command",
                         metavar="<command>",
                         help="'train'")
-    parser.add_argument('--dataset', required=True,
+    parser.add_argument('--dataset', required=False,
+                        default=ETI_DATA_PATH,
                         metavar="/path/to/eti/dataset/",
                         help='Directory of the eti dataset')
-    parser.add_argument('--weights', required=True,
+    parser.add_argument('--weights', required=False,
+                        default="imagenet",
                         metavar="/path/to/weights.h5",
                         help="Path to weights .h5 file or 'coco'")
     parser.add_argument('--logs', required=False,
@@ -188,10 +190,6 @@ if __name__ == '__main__':
                         metavar="/path/to/logs/",
                         help='Logs and checkpoints directory (default=logs/)')
     args = parser.parse_args()
-
-    # Validate arguments
-    if args.command == "train":
-        assert args.dataset, "Argument --dataset is required for training"
 
     print("Weights: ", args.weights)
     print("Dataset: ", args.dataset)

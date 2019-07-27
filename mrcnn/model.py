@@ -2345,7 +2345,7 @@ class MaskRCNN():
 
         # Add custom callbacks to the list
         if custom_callbacks:
-            callbacks += custom_callbacks
+            callbacks.append(custom_callbacks)
 
         # Train
         log("\nStarting at epoch {}. LR={}\n".format(self.epoch, learning_rate))
