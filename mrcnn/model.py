@@ -67,6 +67,10 @@ class BatchNorm(KL.BatchNormalization):
         """
         return super(self.__class__, self).call(inputs, training=training)
 
+    def get_config(self):
+        base_config = super(BatchNorm, self).get_config()
+        return base_config
+
 
 def compute_backbone_shapes(config, image_shape):
     """Computes the width and height of each stage of the backbone network.

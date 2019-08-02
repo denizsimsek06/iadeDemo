@@ -5,9 +5,9 @@ from imgaug import augmenters as aug
 
 ROOT_DIR = os.path.abspath("../")
 
-# Import Mask RCNN
-sys.path.append(ROOT_DIR)  # To find local version of the library
-from mrcnn.eti import EtiDataset, EtiConfig
+# Import Mask RCNN# To find local version of the library
+sys.path.append(ROOT_DIR)
+from mrcnn.eti import EtiDataset, EtiConfigT
 import mrcnn.model as modellib
 
 # Path to trained weights file
@@ -37,8 +37,7 @@ def train(model):
     # Since we're using a very small dataset, and starting from
     # COCO trained weights, we don't need to train too long. Also,
     # no need to train all layers, just the heads should do it.
-    print("Training network heads")
-
+    
     augmentation = aug.Sequential([aug.Fliplr(0.5), aug.Flipud(0.5),
                                    aug.OneOf([aug.Affine(rotate=0),
                                               aug.Affine(rotate=90),
@@ -47,23 +46,25 @@ def train(model):
                                    aug.Sometimes(0.5, aug.Affine(rotate=(-10, 10))),
                                    aug.Add((-15, 15), per_channel=1)])
 
+    print("Training network heads")
+    model.train(dataset_train, dataset_val,
+                learning_rate=config.LEARNING_RATE,
+                epochs=10,
+                layers='heads',
+                augmentation=augmentation)
+    print("Training layers 4+")
     model.train(dataset_train, dataset_val,
                 learning_rate=config.LEARNING_RATE,
                 epochs=30,
-                layers='all',
+                layers='4+',
                 augmentation=augmentation)
-
+    print("Training all layers")
     model.train(dataset_train, dataset_val,
                 learning_rate=config.LEARNING_RATE / 10,
                 epochs=50,
                 layers='all',
                 augmentation=augmentation)
 
-    model.train(dataset_train, dataset_val,
-                learning_rate=config.LEARNING_RATE / 30,
-                epochs=75,
-                layers='all',
-                augmentation=augmentation)
 
 
 if __name__ == '__main__':
@@ -91,7 +92,8 @@ if __name__ == '__main__':
     print("Logs: ", args.logs)
 
     # Configurations
-    config = EtiConfig()
+    config = EtiConfigT(n_imaget=46,n_imagev=11)
+
     config.display()
 
     # Create model
@@ -107,9 +109,7 @@ if __name__ == '__main__':
         weights_path = args.weights
 
     if args.weights.lower() == "coco":
-        model.load_weights(weights_path, by_name=True,
-                           exclude=["mrcnn_class_logits", "mrcnn_bbox_fc",
-                                    "mrcnn_bbox", "mrcnn_mask"])
+        model.load_weights(weights_path, by_name=True, exclude=[ "mrcnn_class_logits", "mrcnn_bbox_fc", "mrcnn_bbox", "mrcnn_mask"])
     else:
         model.load_weights(weights_path, by_name=True)
 

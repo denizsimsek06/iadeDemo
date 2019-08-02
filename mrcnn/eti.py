@@ -11,36 +11,57 @@ from mrcnn.utils import Dataset
 #  Configurations
 ############################################################
 
-class EtiConfig(Config):
+class EtiConfigT(Config):
     """Configuration for training on the eti  dataset.
     Derives from the base Config class and overrides some values.
     """
-    NAME = "eti"
+    NAME = "eti_train"
 
-    NUM_CLASSES = 1 + 2
-
-    IMAGE_RESIZE_MODE = "crop"
+    IMAGE_RESIZE_MODE = "square"
+    IMAGE_MIN_DIM = 1024
+    IMAGE_MAX_DIM = 1024
+    NUM_CLASSES = 1 + 1
     GPU_COUNT = 1
-    IMAGES_PER_GPU = 2
+    IMAGES_PER_GPU = 1
+    BACKBONE = "resnet50"
+    TRAIN_ROIS_PER_IMAGE = 64
+    DETECTION_MAX_INSTANCES = 32
+    MAX_GT_INSTANCES = 32
 
-    # Smaller images for faster training
-    IMAGE_MAX_DIM = 512
-    IMAGE_MIN_DIM = 512
+    def __init__(self, n_imaget, n_imagev):
+        self.STEPS_PER_EPOCH = n_imaget * 3
+        self.VALIDATION_STEPS = n_imagev * 3
+        self.BATCH_SIZE = self.IMAGES_PER_GPU * self.GPU_COUNT
 
-    # Smaller anchors
-    RPN_ANCHOR_SCALES = (16, 32, 64, 128, 256)
-    # Few objects in image, use less ROIs per image
+        # Input image size
+        if self.IMAGE_RESIZE_MODE == "crop":
+            self.IMAGE_SHAPE = np.array([self.IMAGE_MIN_DIM, self.IMAGE_MIN_DIM,
+                                         self.IMAGE_CHANNEL_COUNT])
+        else:
+            self.IMAGE_SHAPE = np.array([self.IMAGE_MAX_DIM, self.IMAGE_MAX_DIM,
+                                         self.IMAGE_CHANNEL_COUNT])
 
-    # Number of classes (including background)
+        # Image meta data length
+        # See compose_image_meta() for details
+        self.IMAGE_META_SIZE = 1 + 3 + 3 + 4 + 1 + self.NUM_CLASSES
 
-    # Number of training steps per epoch
-    STEPS_PER_EPOCH = 92
-    VALIDATION_STEPS = 23
 
-    USE_MINI_MASK = True
+class EtiConfigI(Config):
+    """Configuration for training on the eti  dataset.
+    Derives from the base Config class and overrides some values.
+    """
+    NAME = "eti_inference"
 
-    # Skip detections with < 70% confidence
-    DETECTION_MIN_CONFIDENCE = 0.7
+    IMAGE_RESIZE_MODE = "square"
+    IMAGE_MIN_DIM = 1024
+    IMAGE_MAX_DIM = 1024
+    NUM_CLASSES = 1 + 1
+    GPU_COUNT = 1
+    IMAGES_PER_GPU = 1
+    BACKBONE = "resnet50"
+    TRAIN_ROIS_PER_IMAGE = 64
+    DETECTION_MAX_INSTANCES = 32
+    MAX_GT_INSTANCES = 32
 
 
 ############################################################
@@ -49,15 +70,15 @@ class EtiConfig(Config):
 
 class EtiDataset(Dataset):
 
-    def load_eti(self, dataset_dir, mode):
+    def load_eti(self, dataset_dir, subset):
         """Load a subset of the eti dataset.
         dataset_dir: Root directory of the dataset.
         subset: Subset to load: train or val
         """
         self.add_class("packages", 1, "tutku")
-        self.add_class("packages", 2, "juice")
 
-        dataset_dir = os.path.join(dataset_dir, mode)
+        assert subset in ["train", "val", "liltrain", "lilval"]
+        dataset_dir = os.path.join(dataset_dir, subset)
 
         annotations = json.load(open(os.path.join(dataset_dir, "via_region_data.json")))
         annotations = annotations["_via_img_metadata"]
@@ -74,7 +95,7 @@ class EtiDataset(Dataset):
             # The if condition is needed to support VIA versions 1.x and 2.x.
 
             polygons = [r['shape_attributes'] for r in a['regions']]
-            labels = [l['region_attributes'] for l in a['regions']]
+            names = [l['region_attributes'] for l in a['regions']]
 
             # load_mask() needs the image size to convert polygons to masks.
             # Unfortunately, VIA doesn't include it in JSON, so we must read
@@ -87,7 +108,7 @@ class EtiDataset(Dataset):
                 path=image_path,
                 width=width, height=height,
                 polygons=polygons,
-                labels=labels)
+                names=names)
 
     def load_mask(self, image_id):
         """Generate instance masks for an image.
@@ -96,10 +117,15 @@ class EtiDataset(Dataset):
             one mask per instance.
         class_ids: a 1D array of class IDs of the instance masks.
         """
+        image_info = self.image_info[image_id]
+        if image_info["source"] != "packages":
+            return super(self.__class__, self).load_mask(image_id)
 
         # Convert polygons to a bitmap mask of shape
         # [height, width, instance_count]
         info = self.image_info[image_id]
+        class_names = info["names"]
+
         mask = np.zeros([info["height"], info["width"], len(info["polygons"])],
                         dtype=np.uint8)
 
@@ -108,15 +134,13 @@ class EtiDataset(Dataset):
             rr, cc = skimage.draw.polygon(p['all_points_y'], p['all_points_x'])
             mask[rr, cc, i] = 1
 
-        label_names = [n['name'] for n in info['labels']]
-        class_ids = []
-        for i, nom in enumerate(self.class_info):
-            for name in label_names:
-                if nom['name'] == name:
-                    class_ids.append(i)
+        class_ids = np.zeros([len(info["polygons"])])
+        for i, p in enumerate(class_names):
+            if p['name'] == 'tutku':
+                class_ids[i] = 1
 
         # Return mask, and array of class IDs of each instance.
-        return mask.astype(np.bool), np.asarray(class_ids)
+        return mask.astype(np.bool), np.asarray(class_ids.astype(np.int))
 
     def image_reference(self, image_id):
         """Return the path of the image."""
