@@ -1,0 +1,54 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="../static/iadeDemoApp/css/album.css" rel="stylesheet">
+
+    <title>Tutku Detection</title>
+  </head>
+
+  <body>
+  {% block content %}<div class="jumbotron">
+      <section class="jumbotron text-center">
+      <h1 class="jumbotron-heading">Tutku Detection</h1>
+
+        <div class="col-md-4">
+
+    <ul>
+      <a class="btn btn-primary my-2" href="{% url 'upload_image' %}">Upload Image</a>
+    </ul>
+        </div>
+        <div class="col-md-4">
+  <h4 class="jumbotron-heading">Uploaded image:</h4>
+  <ul>
+    {% for upload in upload %}
+
+        <a href="{{ upload.image.url }}"></a>
+        <img class="card-img" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" src="{{ upload.image.url}}" alt="IMAGE">
+
+    {% endfor %}
+  </ul>
+        </div>
+        <div class="col-md-4">
+    <ul>
+      <a class="btn btn-primary my-2" href="{% url 'prediction' %}">Predict</a>
+    </ul>
+        </div>
+        <div class="col-md-4">
+    <h4 class="jumbotron-heading">Predictions:</h4>
+  <ul>
+    {% for prediction in prediction %}
+        <a href="{{ prediction.image.url }}"></a>
+        <img class="card-img" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" src="{{ prediction.image.url}}" alt="PRED_IMAGE">
+    {% endfor %}
+  </ul>
+                  </div>
+      </section>
+  </div>
+{% endblock %}
