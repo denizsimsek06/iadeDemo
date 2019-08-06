@@ -11,7 +11,8 @@ from mrcnn import eti, utils, model as modellib, visualize
 
 MODEL_DIR = path.abspath("/Users/denizsimsek/Desktop/iade/logs")
 WEIGHTS_PATH = path.abspath("/Users/denizsimsek/Desktop/iade/logs/mask_rcnn_eti_train_0044.h5")
-
+SAVE_DIR = path.abspath("/Users/denizsimsek/Desktop/iade/iadeDemo/iadeDemoApp/media/prediction/")
+IMAGE_PATH=path.abspath("/Users/denizsimsek/Desktop/iade/iadeDemo/iadeDemoApp/media/upload/upload.jpg")
 
 class InferenceConfig(eti.EtiConfigT(0, 0).__class__):
     # Run detection on one image at a time
@@ -34,7 +35,7 @@ model_inference.keras_model._make_predict_function()
 
 def predict():
     matplotlib.use('Agg')
-    image = skimage.io.imread('/Users/denizsimsek/Desktop/iade/iadeDemo/iadeDemoApp/media/upload/upload.jpg')
+    image = skimage.io.imread(IMAGE_PATH)
 
     image, window, scale, padding, crop = utils.resize_image(
         image,
@@ -46,5 +47,6 @@ def predict():
     # get dictionary for first prediction
     r = results[0]
     visualize.save_image(image, 'prediction', r['rois'], r['masks'], r['class_ids'],
-                         r['scores'], ['BG', 'tutku'], scores_thresh=0.9,
-                         save_dir='/Users/denizsimsek/Desktop/iade/iade/iadeDemoApp/media/prediction/')
+                         r['scores'], ['BG', 'tutku'], scores_thresh=config.DETECTION_MIN_CONFIDENCE,
+                         save_dir=SAVE_DIR)
+    return len(r['class_ids'])

@@ -19,6 +19,7 @@ import matplotlib.pyplot as plt
 from matplotlib import patches,  lines
 from matplotlib.patches import Polygon
 import IPython.display
+from PIL import Image, ImageDraw, ImageFont
 
 # Root directory of the project
 ROOT_DIR = os.path.abspath("../")
@@ -89,7 +90,7 @@ def save_image(image, image_name, boxes, masks, class_ids, scores, class_names, 
         print("\n*** No instances in image %s to draw *** \n" % (image_name))
         return
 
-    colors = random_colors(len(useful_mask_indices))
+    colors = single_color(len(useful_mask_indices))
 
     if mode != 3:
         masked_image = image.astype(np.uint8).copy()
@@ -164,6 +165,21 @@ def random_colors(N, bright=True):
     colors = list(map(lambda c: colorsys.hsv_to_rgb(*c), hsv))
     random.shuffle(colors)
     return colors
+
+
+def single_color(N, colour='green'):
+    """
+    Generate random colors.
+    To get visually distinct colors, generate them in HSV space then
+    convert to RGB.
+    """
+    if colour == 'green':
+        colors = [(0,1,0)]
+    if colour == 'red':
+        colors = [(1,0,0)]
+    if colour == 'blue':
+        colors = [(0,0,1)]
+    return colors*N
 
 
 def apply_mask(image, mask, color, alpha=0.5):

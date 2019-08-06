@@ -14,41 +14,44 @@
   </head>
 
   <body>
-  {% block content %}<div class="jumbotron">
-      <section class="jumbotron text-center">
-      <h1 class="jumbotron-heading">Tutku Detection</h1>
+    
+      <div class="jumbotron">
+        <section class="jumbotron text-center">
+          <h1 class="jumbotron-heading">Tutku Detection</h1>
 
-        <div class="col-md-4">
+{% block upload %}
+          <div class="col-md-4">
 
-    <ul>
-      <a class="btn btn-primary my-2" href="{% url 'upload_image' %}">Upload Image</a>
-    </ul>
-        </div>
-        <div class="col-md-4">
-  <h4 class="jumbotron-heading">Uploaded image:</h4>
-  <ul>
-    {% for upload in upload %}
-
-        <a href="{{ upload.image.url }}"></a>
-        <img class="card-img" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" src="{{ upload.image.url}}" alt="IMAGE">
-
-    {% endfor %}
-  </ul>
-        </div>
-        <div class="col-md-4">
-    <ul>
-      <a class="btn btn-primary my-2" href="{% url 'prediction' %}">Predict</a>
-    </ul>
-        </div>
-        <div class="col-md-4">
-    <h4 class="jumbotron-heading">Predictions:</h4>
-  <ul>
-    {% for prediction in prediction %}
-        <a href="{{ prediction.image.url }}"></a>
-        <img class="card-img" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" src="{{ prediction.image.url}}" alt="PRED_IMAGE">
-    {% endfor %}
-  </ul>
-                  </div>
-      </section>
-  </div>
+            <ul>
+              <a class="btn btn-primary my-2" href="{% url 'upload_image' %}">Upload Image</a>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3 class="jumbotron-heading">Uploaded image:</h3>
+            <ul>
+              {% for upload in upload %}
+                <img class="img-fluid" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" src="{{ upload.image.url }}" alt="IMAGE">
+              {% endfor %}
+            </ul>
+          </div>
 {% endblock %}
+{% block prediction %}
+          <div class="col-md-4">
+            <ul>
+              <a class="btn btn-primary my-2" href="{% url 'prediction' %}">Predict</a>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3 class="jumbotron-heading">Predictions:</h3>
+              <ul>
+                {% for prediction in prediction %}
+                  <h5 class="jumbotron-heading">Count: {{ prediction.count }}</h5>
+                  <img class="img-fluid" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" src="{{ prediction.image.url }}" alt="PRED_IMAGE">
+                {% endfor %}
+              </ul>
+          </div>
+{% endblock %}
+        </section>
+      </div>
+  </body>
+</html>

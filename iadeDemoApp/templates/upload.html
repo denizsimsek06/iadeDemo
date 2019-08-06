@@ -12,18 +12,22 @@
 
     <title>Upload image</title>
   </head>
-
-{% block content %}
-    <section class="jumbotron text-center">
+  <body>
+    {% block content %}
+      <section class="jumbotron text-center">
         <div class="container">
 
-  <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-      <h4 class="text-black">{{ form.as_p }}</h4>
-    <button type="submit" class="btn btn-primary my-2">Upload</button>
-  </form>
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <h4 class="text-black">{{ form.as_p }}</h4>
+          <button type="submit" class="btn btn-primary my-2">Upload</button>
+        </form>
 
-  <p><a href="{% url 'home' %}" class="btn btn-secondary my-2">Return to home</a></p>
-            </div>
-    </section>
-{% endblock %}
+        <p>
+          <a href="{% url 'home' %}" class="btn btn-secondary my-2">Return to home</a>
+        </p>
+        </div>
+      </section>
+    {% endblock %}
+  </body>
+</html>

@@ -31,3 +31,4 @@ class Upload(models.Model):
 
 class Prediction(models.Model):
     image = models.ImageField(upload_to=prediction_location)
+    count = models.IntegerField(default=0)

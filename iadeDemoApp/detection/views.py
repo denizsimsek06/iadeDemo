@@ -18,10 +18,10 @@ def upload_image(request):
 
 
 def prediction(request):
-    predict()
+    num_detect = predict()
     Prediction.objects.all().delete()
     img = 'prediction/prediction.jpg'
-    pred = Prediction(image=img)
+    pred = Prediction(image=img, count=num_detect)
     form = PredictionForm(request.POST, instance=pred)
     form.save()
     return redirect('home')
